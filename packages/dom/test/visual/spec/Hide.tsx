@@ -1,11 +1,5 @@
-import type {Placement} from '@floating-ui/dom';
-import {
-  autoUpdate,
-  hide,
-  shift,
-  size,
-  useFloating,
-} from '@floating-ui/react-dom';
+import type {Placement} from '@folz/anchors';
+import {autoUpdate, hide, shift, size, useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useState} from 'react';
 
 import {allPlacements} from '../utils/allPlacements';

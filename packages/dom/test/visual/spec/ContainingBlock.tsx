@@ -1,4 +1,4 @@
-import {autoUpdate, useFloating} from '@floating-ui/react-dom';
+import {autoUpdate, useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useState} from 'react';
 
 import {Controls} from '../utils/Controls';
@@ -24,10 +24,10 @@ export function ContainingBlock() {
       <p>The floating element should be correctly positioned.</p>
       <div
         className="container"
+        // @ts-ignore
         style={
           containerType
             ? {
-                // @ts-ignore
                 containerType,
               }
             : {willChange, contain}

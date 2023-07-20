@@ -1,5 +1,5 @@
-import type {Middleware, Padding} from '@floating-ui/dom';
-import {arrow as arrowCore, MiddlewareState} from '@floating-ui/dom';
+import type {Middleware, Padding} from '@folz/anchors';
+import {arrow as arrowCore, MiddlewareState} from '@folz/anchors';
 import * as React from 'react';
 
 export interface Options {

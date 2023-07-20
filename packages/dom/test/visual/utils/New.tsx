@@ -1,9 +1,9 @@
-import type {Placement} from '@floating-ui/dom';
-import {arrow, useFloating} from '@floating-ui/react-dom';
+import type {Placement} from '@folz/anchors-react';
+import {arrow, useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useRef, useState} from 'react';
 
-import {allPlacements} from '../utils/allPlacements';
-import {Controls} from '../utils/Controls';
+import {allPlacements} from './allPlacements';
+import {Controls} from './Controls';
 import {useSize} from './useSize';
 
 export function New() {

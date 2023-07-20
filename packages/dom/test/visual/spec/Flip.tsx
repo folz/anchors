@@ -1,6 +1,6 @@
-import type {Placement} from '@floating-ui/dom';
-import type {FlipOptions} from '@floating-ui/dom';
-import {flip, shift, useFloating} from '@floating-ui/react-dom';
+import type {Placement} from '@folz/anchors';
+import type {FlipOptions} from '@folz/anchors';
+import {flip, shift, useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useState} from 'react';
 
 import {allPlacements} from '../utils/allPlacements';

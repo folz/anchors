@@ -1,5 +1,5 @@
 {
-  "name": "@floating-ui/react-dom",
+  "name": "@folz/anchors-react",
   "version": "0.1.0",
   "@rollingversions": {
     "baseVersion": [
@@ -12,16 +12,16 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "./dist/floating-ui.react-dom.umd.js",
-  "module": "./dist/floating-ui.react-dom.esm.js",
-  "unpkg": "./dist/floating-ui.react-dom.umd.min.js",
+  "main": "./dist/anchors.react-dom.umd.js",
+  "module": "./dist/anchors.react-dom.esm.js",
+  "unpkg": "./dist/anchors.react-dom.umd.min.js",
   "types": "./index.d.ts",
   "exports": {
     ".": {
       "types": "./index.d.ts",
-      "module": "./dist/floating-ui.react-dom.esm.js",
-      "import": "./dist/floating-ui.react-dom.mjs",
-      "default": "./dist/floating-ui.react-dom.umd.js"
+      "module": "./dist/anchors.react-dom.esm.js",
+      "import": "./dist/anchors.react-dom.mjs",
+      "default": "./dist/anchors.react-dom.umd.js"
     },
     "./package.json": "./package.json"
   },
@@ -37,13 +37,13 @@
   },
   "author": "atomiks",
   "license": "MIT",
-  "bugs": "https://github.com/floating-ui/floating-ui",
+  "bugs": "https://github.com/folz/anchors",
   "repository": {
     "type": "git",
-    "url": "https://github.com/floating-ui/floating-ui.git",
+    "url": "https://github.com/folz/anchors.git",
     "directory": "packages/react-dom"
   },
-  "homepage": "https://floating-ui.com/docs/react-dom",
+  "homepage": "https://folz.github.io/docs/react-dom",
   "keywords": [
     "tooltip",
     "popover",
@@ -59,7 +59,8 @@
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
-    "@floating-ui/dom": "^0.1.0"
+    "@folz/anchors": "workspace:^",
+    "@folz/anchors-react": "workspace:^"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.16.0",

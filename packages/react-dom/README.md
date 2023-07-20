@@ -1,3 +1,3 @@
-# @floating-ui/react-dom
+# @folz/anchors-dom
 
-This is the library to use Floating UI with React DOM.
+This is the library to use Anchors with React DOM.

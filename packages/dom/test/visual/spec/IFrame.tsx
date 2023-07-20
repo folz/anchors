@@ -1,9 +1,4 @@
-import {
-  autoUpdate,
-  limitShift,
-  shift,
-  useFloating,
-} from '@floating-ui/react-dom';
+import {autoUpdate, limitShift, shift, useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 

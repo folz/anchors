@@ -1,10 +1,10 @@
-import type {Alignment, Placement} from '@floating-ui/dom';
+import type {Alignment, Placement} from '@folz/anchors';
 import {
   autoPlacement,
   autoUpdate,
   shift,
   useFloating,
-} from '@floating-ui/react-dom';
+} from '@folz/anchors-react';
 import {useState} from 'react';
 
 import {Controls} from '../utils/Controls';

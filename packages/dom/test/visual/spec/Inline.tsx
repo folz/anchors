@@ -1,11 +1,5 @@
-import {Coords, Placement} from '@floating-ui/dom';
-import {
-  autoUpdate,
-  flip,
-  inline,
-  size,
-  useFloating,
-} from '@floating-ui/react-dom';
+import {Coords, Placement} from '@folz/anchors';
+import {autoUpdate, flip, inline, size, useFloating} from '@folz/anchors-react';
 import {useEffect, useState} from 'react';
 
 import {allPlacements} from '../utils/allPlacements';

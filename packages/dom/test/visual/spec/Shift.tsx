@@ -1,13 +1,13 @@
-import type {Placement} from '@floating-ui/dom';
-import type {LimitShiftOptions} from '@floating-ui/dom';
+import type {Placement} from '@folz/anchors';
+import type {LimitShiftOptions} from '@folz/anchors';
+import {useLayoutEffect, useState} from 'react';
+
 import {
   limitShift as limitShiftFn,
   offset,
   shift,
   useFloating,
-} from '@floating-ui/react-dom';
-import {useLayoutEffect, useState} from 'react';
-
+} from '../../../../react-dom';
 import {allPlacements} from '../utils/allPlacements';
 import {Controls} from '../utils/Controls';
 import {useScroll} from '../utils/useScroll';

@@ -1,9 +1,4 @@
-import {
-  autoUpdate,
-  computePosition,
-  Placement,
-  Strategy,
-} from '@floating-ui/dom';
+import {autoUpdate, computePosition, Placement, Strategy} from '@folz/anchors';
 import {HTMLAttributes} from 'react';
 
 interface FloatingUICustomElement {

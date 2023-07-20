@@ -1,5 +1,5 @@
-import type {Dimensions} from '@floating-ui/dom';
-import {size as sizeM, useFloating} from '@floating-ui/react-dom';
+import type {Dimensions} from '@folz/anchors';
+import {size as sizeM, useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useState} from 'react';
 
 import {Controls} from '../utils/Controls';

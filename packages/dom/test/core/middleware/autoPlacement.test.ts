@@ -1,4 +1,4 @@
-import {getPlacementList} from '@floating-ui/dom';
+import {getPlacementList} from '@folz/anchors';
 
 test('base placement', () => {
   expect(

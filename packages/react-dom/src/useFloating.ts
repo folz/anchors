@@ -1,4 +1,4 @@
-import {computePosition} from '@floating-ui/dom';
+import {computePosition} from '@folz/anchors';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import useLayoutEffect from 'use-isomorphic-layout-effect';

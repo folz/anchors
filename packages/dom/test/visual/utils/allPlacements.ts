@@ -1,4 +1,4 @@
-import type {Placement} from '@floating-ui/dom';
+import type {Placement} from '@folz/anchors';
 
 // clockwise ordering
 export const allPlacements: Placement[] = [

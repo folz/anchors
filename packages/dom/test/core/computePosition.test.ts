@@ -2,7 +2,7 @@ import {
   computePosition,
   FloatingElement,
   ReferenceElement,
-} from '@floating-ui/dom';
+} from '@folz/anchors';
 
 const reference = {} as ReferenceElement;
 const floating = {} as FloatingElement;

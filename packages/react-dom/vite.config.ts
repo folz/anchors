@@ -10,8 +10,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@floating-ui/dom': path.resolve(__dirname, '../dom/src/index.ts'),
-      '@floating-ui/react-dom': path.resolve(
+      '@folz/anchors': path.resolve(__dirname, '../dom/src/index.ts'),
+      '@folz/anchors-react': path.resolve(
         __dirname,
         '../react-dom/src/index.ts'
       ),

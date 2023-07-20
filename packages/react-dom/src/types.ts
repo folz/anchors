@@ -2,7 +2,7 @@ import type {
   ComputePositionConfig,
   ComputePositionReturn,
   VirtualElement,
-} from '@floating-ui/dom';
+} from '@folz/anchors';
 import * as React from 'react';
 
 export {arrow, Options as ArrowOptions} from './arrow';
@@ -45,7 +45,7 @@ export type {
   SizeOptions,
   Strategy,
   VirtualElement,
-} from '@floating-ui/dom';
+} from '@folz/anchors';
 export {
   autoPlacement,
   autoUpdate,
@@ -59,7 +59,7 @@ export {
   offset,
   shift,
   size,
-} from '@floating-ui/dom';
+} from '@folz/anchors';
 
 type Prettify<T> = {
   [K in keyof T]: T[K];

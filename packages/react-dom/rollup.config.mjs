@@ -10,47 +10,47 @@ const bundles = [
   {
     input,
     output: {
-      file: './dist/floating-ui.react-dom.esm.js',
+      file: './dist/anchors.react-dom.esm.js',
       format: 'esm',
     },
   },
   {
     input,
     output: {
-      file: './dist/floating-ui.react-dom.esm.min.js',
+      file: './dist/anchors.react-dom.esm.min.js',
       format: 'esm',
     },
   },
   {
     input,
     output: {
-      name: 'FloatingUIReactDOM',
-      file: './dist/floating-ui.react-dom.umd.js',
+      name: 'AnchorsReactDOM',
+      file: './dist/anchors.react-dom.umd.js',
       format: 'umd',
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
-        '@floating-ui/dom': 'FloatingUIDOM',
+        '@folz/anchors': 'AnchorsDOM',
       },
     },
   },
   {
     input,
     output: {
-      name: 'FloatingUIReactDOM',
-      file: './dist/floating-ui.react-dom.umd.min.js',
+      name: 'AnchorsReactDOM',
+      file: './dist/anchors.react-dom.umd.min.js',
       format: 'umd',
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
-        '@floating-ui/dom': 'FloatingUIDOM',
+        '@folz/anchors': 'AnchorsDOM',
       },
     },
   },
   {
     input,
     output: {
-      file: './dist/floating-ui.react-dom.mjs',
+      file: './dist/anchors.react-dom.mjs',
       format: 'esm',
     },
   },
@@ -59,7 +59,7 @@ const bundles = [
 export default bundles.map(({input, output}) => ({
   input,
   output,
-  external: ['react', 'react-dom', '@floating-ui/dom'],
+  external: ['react', 'react-dom', '@folz/anchors'],
   plugins: [
     commonjs(),
     nodeResolve({extensions: ['.ts']}),

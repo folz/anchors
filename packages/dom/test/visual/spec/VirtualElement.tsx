@@ -1,4 +1,4 @@
-import {autoUpdate, useFloating} from '@floating-ui/react-dom';
+import {autoUpdate, useFloating} from '@folz/anchors-react';
 import {useEffect, useRef} from 'react';
 
 import {useScroll} from '../utils/useScroll';

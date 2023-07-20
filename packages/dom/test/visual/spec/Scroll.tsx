@@ -1,5 +1,5 @@
-import {Strategy} from '@floating-ui/dom';
-import {useFloating} from '@floating-ui/react-dom';
+import {Strategy} from '@folz/anchors';
+import {useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useState} from 'react';
 
 import {Controls} from '../utils/Controls';

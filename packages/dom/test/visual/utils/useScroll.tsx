@@ -1,5 +1,5 @@
-import {type VirtualElement, isElement} from '@floating-ui/dom';
-import {getOverflowAncestors, shift, useFloating} from '@floating-ui/react-dom';
+import {type VirtualElement, isElement} from '@folz/anchors';
+import {getOverflowAncestors, shift, useFloating} from '@folz/anchors-react';
 import {
   MutableRefObject,
   useEffect,

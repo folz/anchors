@@ -1,3 +1,3 @@
-# @floating-ui/dom
+# @folz/anchors
 
-This is the library to use Floating UI on the web.
+This is the library to use Anchors on the web.

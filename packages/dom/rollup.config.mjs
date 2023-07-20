@@ -9,44 +9,44 @@ const bundles = [
   {
     input,
     output: {
-      file: './dist/floating-ui.dom.esm.js',
+      file: './dist/anchors.dom.esm.js',
       format: 'esm',
     },
   },
   {
     input,
     output: {
-      file: './dist/floating-ui.dom.mjs',
+      file: './dist/anchors.dom.mjs',
       format: 'esm',
     },
   },
   {
     input,
     output: {
-      file: './dist/floating-ui.dom.browser.mjs',
+      file: './dist/anchors.dom.browser.mjs',
       format: 'esm',
     },
   },
   {
     input,
     output: {
-      file: './dist/floating-ui.dom.browser.min.mjs',
+      file: './dist/anchors.dom.browser.min.mjs',
       format: 'esm',
     },
   },
   {
     input,
     output: {
-      name: 'FloatingUIDOM',
-      file: './dist/floating-ui.dom.umd.js',
+      name: 'AnchorsDOM',
+      file: './dist/anchors.dom.umd.js',
       format: 'umd',
     },
   },
   {
     input,
     output: {
-      name: 'FloatingUIDOM',
-      file: './dist/floating-ui.dom.umd.min.js',
+      name: 'AnchorsDOM',
+      file: './dist/anchors.dom.umd.min.js',
       format: 'umd',
     },
   },

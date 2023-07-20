@@ -1,5 +1,5 @@
-import {autoUpdate} from '@floating-ui/react-dom';
-import {useFloating} from '@floating-ui/react-dom';
+import {autoUpdate} from '@folz/anchors-react';
+import {useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useState} from 'react';
 
 import {Controls} from '../utils/Controls';

@@ -7,7 +7,7 @@ import {
   offset,
   shift,
   useFloating,
-} from '@floating-ui/react-dom';
+} from '@folz/anchors-react';
 
 import {Controls} from '../utils/Controls';
 import {useSize} from '../utils/useSize';

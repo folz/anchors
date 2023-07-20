@@ -1,5 +1,5 @@
-import type {Placement} from '@floating-ui/dom';
-import {shift, useFloating} from '@floating-ui/react-dom';
+import type {Placement} from '@folz/anchors';
+import {shift, useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useState} from 'react';
 
 import {allPlacements} from '../utils/allPlacements';

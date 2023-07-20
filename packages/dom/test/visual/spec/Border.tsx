@@ -1,4 +1,4 @@
-import {useFloating} from '@floating-ui/react-dom';
+import {useFloating} from '@folz/anchors-react';
 import {useLayoutEffect, useState} from 'react';
 
 import {Controls} from '../utils/Controls';

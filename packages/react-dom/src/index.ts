@@ -13,4 +13,4 @@ export {
   offset,
   shift,
   size,
-} from '@floating-ui/dom';
+} from '@folz/anchors';

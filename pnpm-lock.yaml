@@ -88,6 +88,13 @@ importers:
         version: 0.32.2(jsdom@22.1.0)
 
   packages/dom:
+    dependencies:
+      '@folz/anchors':
+        specifier: workspace:^
+        version: 'link:'
+      '@folz/anchors-react':
+        specifier: workspace:^
+        version: link:../react-dom
     devDependencies:
       '@types/react':
         specifier: ^18.2.14
@@ -104,9 +111,12 @@ importers:
 
   packages/react-dom:
     dependencies:
-      '@floating-ui/dom':
-        specifier: ^0.1.0
+      '@folz/anchors':
+        specifier: workspace:^
         version: link:../dom
+      '@folz/anchors-react':
+        specifier: workspace:^
+        version: 'link:'
     devDependencies:
       '@babel/preset-react':
         specifier: ^7.16.0
