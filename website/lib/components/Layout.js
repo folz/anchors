@@ -56,11 +56,6 @@ import UseRole from '../../public/icons/useRole.svg';
 import UseTransition from '../../public/icons/useTransition.svg';
 import UseTypeahead from '../../public/icons/useTypeahead.svg';
 import VirtualElements from '../../public/icons/virtual-elements.svg';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '../components/Tooltip';
 import {Chrome} from './Chrome';
 import {CircleImage} from './CircleImage';
 import Collapsible from './Collapsible';
@@ -68,6 +63,12 @@ import {Floating} from './Floating';
 import Navigation from './Navigation';
 import Notice from './Notice';
 import {SkipNavContent, SkipNavLink} from './ReachSkipNav';
+import {Required} from './Required';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from './Tooltip';
 import {WordHighlight} from './WordHighlight';
 
 function PackageVersion({package: {name, version}}) {
@@ -409,6 +410,7 @@ const components = {
   Notice,
   WordHighlight,
   CircleImage,
+  Required,
   h2: (props) => <Heading level={2} {...props} />,
   h3: (props) => <Heading level={3} {...props} />,
   h4: (props) => <Heading level={4} {...props} />,

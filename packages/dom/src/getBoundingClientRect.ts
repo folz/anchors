@@ -1,5 +1,5 @@
 import {getScale} from './getScale';
-import {getVisualOffsets} from './getVisualOffsets';
+import {getVisualOffsets, shouldAddVisualOffsets} from './getVisualOffsets';
 import {getWindow} from './getWindow';
 import {isElement} from './isElement';
 import {createCoords} from './math';
@@ -27,11 +27,13 @@ export function getBoundingClientRect(
     }
   }
 
-  const visualOffsets = getVisualOffsets(
+  const visualOffsets = shouldAddVisualOffsets(
     domElement,
     isFixedStrategy,
     offsetParent
-  );
+  )
+    ? getVisualOffsets(domElement)
+    : createCoords(0);
 
   let x = (clientRect.left + visualOffsets.x) / scale.x;
   let y = (clientRect.top + visualOffsets.y) / scale.y;
