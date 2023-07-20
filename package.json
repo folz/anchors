@@ -1,5 +1,5 @@
 {
-  "name": "@floating-ui/monorepo",
+  "name": "@folz/anchors",
   "@rollingversions/ignore": true,
   "private": true,
   "version": "0.0.0",
@@ -10,19 +10,15 @@
       0
     ]
   },
-  "description": "Floating UI monorepo",
-  "workspaces": [
-    "./packages/*"
-  ],
+  "description": "Anchors",
   "scripts": {
     "typecheck": "tsc",
     "lint": "eslint . --ext .js,.ts,.tsx",
-    "playwright": "npx playwright test packages/dom/test/functional",
-    "playwright:update": "npm run playwright -- -u",
-    "build": "npm -w packages/dom run build && npm -w packages/react-dom run build",
-    "build:typescript": "tsc --project .config/tsconfig.json",
-    "clean": "rm -rf packages/**/src/[^_]*.d.ts packages/**/src/**/[^_]*.d.ts packages/**/dist",
-    "postinstall": "patch-package"
+    "playwright": "pnpm dlx playwright test packages/dom/test/functional",
+    "playwright:update": "pnpm run playwright -- -u",
+    "build": "pnpm --filter dom run build && pnpm --filter react-dom run build",
+    "build:typescript": "tsc --project tsconfig.build.json",
+    "clean": "rm -rf packages/**/src/[^_]*.d.ts packages/**/src/**/[^_]*.d.ts packages/**/dist"
   },
   "author": "",
   "license": "MIT",
@@ -59,7 +55,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "jsdom": "^22.1.0",
-    "patch-package": "^6.5.0",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "rollup": "^3.26.0",

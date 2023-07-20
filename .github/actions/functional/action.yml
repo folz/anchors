@@ -3,11 +3,11 @@ description: Performs functional tests checks
 runs:
   using: composite
   steps:
-    - run: npx playwright install --with-deps chromium
+    - run: pnpm dlx playwright install --with-deps chromium
       shell: sh
-    - run: npm run build
+    - run: pnpm run build
       shell: sh
-    - run: npm run playwright
+    - run: pnpm run playwright
       shell: sh
     - uses: actions/upload-artifact@v2
       if: always()

@@ -3,7 +3,7 @@ import {
   flip,
   offset,
   shift,
-} from '@floating-ui/core';
+} from '@floating-ui/dom';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 const reference = {width: 150, height: 100, x: 5, y: 5};

@@ -3,9 +3,9 @@ description: Performs unit tests checks
 runs:
   using: composite
   steps:
-    - run: npm run build
+    - run: pnpm run build
       shell: sh
-    - run: npm -w packages/dom test
+    - run: pnpm --filter dom test
       shell: sh
-    - run: npm -w packages/react-dom test
+    - run: pnpm --filter react-dom test
       shell: sh
