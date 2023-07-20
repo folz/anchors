@@ -1,23 +1,24 @@
 <p align="center">
-  <img src="https://github.com/floating-ui/floating-ui/blob/master/website/assets/floating-ui-banner.png" alt="Floating UI">
+  <img src="https://github.com/folz/anchors/blob/master/website/assets/anchors.png" alt="Anchors">
 <p>
 
-> **Popper is now Floating UI! For Popper v2, visit
-> [its dedicated branch.](https://github.com/floating-ui/floating-ui/tree/v2.x)
-> For help on migrating, check out the
-> [Migration Guide.](https://floating-ui.com/docs/migration)**
+[Anchors](https://folz.github.io/anchors) is a library to position floating
+elements in robust and configurable ways. It lets you create tooltips, popvers,
+dropdowns, and more.
 
-[Floating UI](https://floating-ui.com) is a small library that helps you create
-"floating" elements such as tooltips, popovers, dropdowns, and more.
+It is a fork + rewrite of [Floating UI](https://floating-ui.com/). At a high
+level:
 
-It offers two main features:
-
-1. **Anchor positioning**: Anchor a floating element (such as a tooltip) to
-   another element (such as a button) while simultaneously ensuring it stays in
-   view as best as possible by avoiding collisions. This feature is available
-   for all platforms.
-2. **User interactions for React**: Hooks and components for composing
-   interactions to create accessible floating UI components.
+- Anchors is synchronous; Floating UI is asynchronous
+  - You write `const {x, y, ...rest} = computePosition({ ... });`
+  - Compare to Floating UI's API of
+    `computePosition({ ... }).then(({x, y, ...rest}) => ...);`
+- Anchors will probably not support React Native; Floating UI does.
+  - This was the tradeoff it made to gain a synchronous API.
+- Anchors currently does not support Vue; Floating UI does.
+  - Anchors should be able to support Vue in the future, however.
+- Otherwise, Anchors seeks to maintain behavior parity with Floating UI
+  - By cherry-picking new PRs from Floating UI into the Anchors repository
 
 ## Why
 
@@ -31,15 +32,9 @@ close to the edge of the viewport and becomes obscured, also known as a
 collision. When a collision occurs, the position must be adjusted to ensure the
 floating element remains visible.
 
-Further, floating elements are often interactive, which can raise complex
-accessibility issues when designing user interactions.
-
-Floating UI offers a set of low-level features to help you navigate these
-challenges and build accessible floating UI components.
-
 ## Install
 
-To install Floating UI, you can use a package manager like npm or a
+To install Anchors, you can use a package manager like npm or a
 [CDN](https://floating-ui.com/docs/getting-started#cdn). There are different
 versions available for different platforms.
 
@@ -48,7 +43,12 @@ versions available for different platforms.
 Use on the web with vanilla JavaScript.
 
 ```shell
-npm install @floating-ui/dom
+# npm
+npm install @folz/anchors
+# or
+yarn add @folz/anchors
+# or
+pnpm install @folz/anchors
 ```
 
 You can either start by
@@ -69,20 +69,6 @@ npm install @floating-ui/react
 
 # Positioning only (smaller size)
 npm install @floating-ui/react-dom
-```
-
-#### React Native
-
-```shell
-npm install @floating-ui/react-native
-```
-
-### Vue
-
-Use with [Vue](https://floating-ui.com/docs/vue).
-
-```shell
-npm install @floating-ui/vue
 ```
 
 ### Canvas or other platforms
@@ -120,31 +106,6 @@ of testing the positioning logic.
 Below the main container are UI controls to turn on certain state and options.
 Every single combination of state is tested visually via the snapshots to cover
 as much as possible.
-
-#### React
-
-`npm -w packages/react run dev` in the root will launch the `@floating-ui/react`
-development tests at `http://localhost:1234`.
-
-## README Sponsors
-
-<table>
-  <tr>
-    <td>
-      <a href="https://milfordasset.com/" target="_blank" rel="noopener noreferrer"><img width="176" height="150" src="https://github.com/floating-ui/floating-ui/blob/master/website/assets/sponsors/milford.svg" alt="Milford" /></a>
-    </td>
-  </tr>
-</table>
-
-You can sponsor Floating UI in a variety of ways on
-[Open Collective](https://opencollective.com/floating-ui).
-
-## Credits
-
-The floating shapes in the banner image are made by the amazing artists
-[@artstar3d](https://figma.com/@artstar3d),
-[@killnicole](https://figma.com/@killnicole) and
-[@liiiiiiii](https://www.figma.com/@liiiiiii) on Figma — check out their work!
 
 ## License
 

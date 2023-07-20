@@ -13,13 +13,14 @@ import {
 import {MDXProvider} from '@mdx-js/react';
 import cn from 'classnames';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import {Fragment, useEffect, useRef, useState} from 'react';
 import {ExternalLink, GitHub, Menu} from 'react-feather';
 import useIsomorphicLayoutEffect from 'use-isomorphic-layout-effect';
 
-import Logo from '../../assets/logo.svg';
+import Anchors from '../../assets/anchors.png';
 import Arrow from '../../public/icons/arrow.svg';
 import AutoPlacement from '../../public/icons/autoPlacement.svg';
 import AutoUpdate from '../../public/icons/autoUpdate.svg';
@@ -774,7 +775,11 @@ export default function Layout({children, className}) {
                 }}
               >
                 <Link href="/">
-                  <Logo className="mx-auto mt-2 mb-1 h-28 origin-top" />
+                  <Image
+                    {...Anchors}
+                    alt="Anchors"
+                    className="mx-auto mt-2 mb-1 h-1/3 w-1/3 origin-top"
+                  />
                 </Link>
                 {navOpen && (
                   <button

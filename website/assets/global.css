@@ -9,6 +9,18 @@ html {
   @apply scroll-pt-20;
 }
 
+body {
+  background: linear-gradient(
+    135deg,
+    #1d1d2b 0%,
+    #352438 20%,
+    #4e334f 40%,
+    #51242f 60%,
+    #66223d 80%,
+    #51242f 100%
+  );
+}
+
 h1,
 h2,
 h3,

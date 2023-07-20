@@ -42,15 +42,15 @@
     "build": "NODE_ENV=build rollup -c",
     "test": "vitest"
   },
-  "author": "atomiks",
+  "author": "folz",
   "license": "MIT",
-  "bugs": "https://github.com/floating-ui/floating-ui",
+  "bugs": "https://github.com/folz/anchors",
   "repository": {
     "type": "git",
-    "url": "https://github.com/floating-ui/floating-ui.git",
+    "url": "https://github.com/folz/anchors",
     "directory": "packages/dom"
   },
-  "homepage": "https://floating-ui.com",
+  "homepage": "https://folz.github.io/anchors",
   "keywords": [
     "tooltip",
     "popover",

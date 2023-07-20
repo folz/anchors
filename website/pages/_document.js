@@ -11,15 +11,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* <script
-            async
-            defer
-            data-website-id="15719ba2-10f1-4303-8a19-bed14d1e5d4f"
-            src="https://626cfbd8a2fb4e5308c41baf--fantastic-pixie-a91050.netlify.app/floating.js"
-          /> */}
           <meta
             name="description"
-            content="A JavaScript library to position floating elements and create interactions for them."
+            content="A library to position floating elements in robust and configurable ways."
           />
         </Head>
         <body
