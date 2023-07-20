@@ -26,6 +26,7 @@ export const computePosition = (
 
   const validMiddleware = middleware.filter(Boolean) as Middleware[];
   const rtl = isRTL(floating);
+  const _c = new WeakMap<ReferenceElement, Array<Element>>();
 
   let rects = getElementRects({reference, floating, strategy});
   let {x, y} = computeCoordsFromPlacement(rects, placement, rtl);
@@ -50,6 +51,7 @@ export const computePosition = (
       middlewareData,
       rects,
       elements: {reference, floating},
+      _c,
     });
 
     x = nextX ?? x;

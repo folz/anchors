@@ -1,4 +1,5 @@
 import {sides} from './enums';
+import {_C} from './getClippingRect';
 
 export type Alignment = 'start' | 'end';
 export type Side = (typeof sides)[number];
@@ -116,6 +117,7 @@ export interface MiddlewareState extends Coords {
   middlewareData: MiddlewareData;
   elements: Elements;
   rects: ElementRects;
+  _c: _C;
 }
 
 export type ClientRectObject = Rect & SideObject;

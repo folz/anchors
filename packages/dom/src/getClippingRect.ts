@@ -26,7 +26,7 @@ import {
   Strategy,
 } from './types';
 
-type _C = Map<ReferenceElement, Element[]>;
+export type _C = WeakMap<ReferenceElement, Element[]>;
 
 // Returns the inner client rect, subtracting scrollbars if present.
 function getInnerBoundingClientRect(
@@ -94,11 +94,8 @@ function hasFixedPositionAncestor(element: Element, stopNode: Node): boolean {
 // A "clipping ancestor" is an `overflow` element with the characteristic of
 // clipping (or hiding) child elements. This returns all clipping ancestors
 // of the given element up the tree.
-function getClippingElementAncestors(
-  element: Element,
-  cache: _C
-): Array<Element> {
-  const cachedResult = cache.get(element);
+function getClippingElementAncestors(element: Element, _c: _C): Array<Element> {
+  const cachedResult = _c.get(element);
   if (cachedResult) {
     return cachedResult;
   }
@@ -144,7 +141,7 @@ function getClippingElementAncestors(
     currentNode = getParentNode(currentNode);
   }
 
-  cache.set(element, result);
+  _c.set(element, result);
 
   return result;
 }
