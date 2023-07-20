@@ -1,46 +1,32 @@
-import {computePosition as computePositionCore} from '@floating-ui/core';
-
-import {platform} from './platform';
-import type {
-  ComputePositionConfig,
-  FloatingElement,
-  ReferenceElement,
-} from './types';
-
-/**
- * Computes the `x` and `y` coordinates that will place the floating element
- * next to a reference element when it is given a certain CSS positioning
- * strategy.
- */
-export const computePosition = (
-  reference: ReferenceElement,
-  floating: FloatingElement,
-  options?: Partial<ComputePositionConfig>
-) => {
-  // This caches the expensive `getClippingElementAncestors` function so that
-  // multiple lifecycle resets re-use the same result. It only lives for a
-  // single call. If other functions become expensive, we can add them as well.
-  const cache = new Map<ReferenceElement, Array<Element>>();
-  const mergedOptions = {platform, ...options};
-  const platformWithCache = {...mergedOptions.platform, _c: cache};
-  return computePositionCore(reference, floating, {
-    ...mergedOptions,
-    platform: platformWithCache,
-  });
-};
-
-export {autoUpdate} from './autoUpdate';
-export {platform} from './platform';
-export {getOverflowAncestors} from './utils/getOverflowAncestors';
+export {type AutoUpdateOptions, autoUpdate} from './autoUpdate';
+export {computePosition} from './computePosition';
+export {convertOffsetParentRelativeRectToViewportRelativeRect} from './convertOffsetParentRelativeRectToViewportRelativeRect';
+export {type DetectOverflowOptions, detectOverflow} from './detectOverflow';
+export {getClientRects} from './getClientRects';
+export {getClippingRect} from './getClippingRect';
+export {getDocumentElement} from './getDocumentElement';
+export {getElementRects} from './getElementRects';
+export {getOffsetParent} from './getOffsetParent';
+export {getOverflowAncestors} from './getOverflowAncestors';
+export {getScale} from './getScale';
+export {isElement} from './isElement';
+export {isRTL} from './isRTL';
+export {type ArrowOptions, arrow} from './middleware/arrow';
 export {
-  arrow,
+  type AutoPlacementOptions,
+  allPlacements,
   autoPlacement,
-  detectOverflow,
-  flip,
-  hide,
-  inline,
+  getPlacementList,
+} from './middleware/autoPlacement';
+export {type FlipOptions, flip} from './middleware/flip';
+export {type HideOptions, hide} from './middleware/hide';
+export {type InlineOptions, inline} from './middleware/inline';
+export {type OffsetOptions, offset} from './middleware/offset';
+export {
+  type LimitShiftOptions,
+  type ShiftOptions,
   limitShift,
-  offset,
   shift,
-  size,
-} from '@floating-ui/core';
+} from './middleware/shift';
+export {type SizeOptions, size} from './middleware/size';
+export * from './types';

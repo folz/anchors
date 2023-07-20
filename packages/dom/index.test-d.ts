@@ -9,7 +9,6 @@ import {
   limitShift,
   Middleware,
   offset,
-  platform,
   shift,
   size,
 } from '.';
@@ -234,10 +233,4 @@ computePosition(document.body, document.body, {
   middleware: [null, undefined, false, offset()],
 });
 
-computePosition(document.body, document.body, {
-  platform: {
-    ...platform,
-    getOffsetParent: (element) =>
-      (element as HTMLElement).offsetParent || window,
-  },
-});
+computePosition(document.body, document.body, {});

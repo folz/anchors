@@ -1,4 +1,4 @@
-import type {Coords} from '@floating-ui/core';
+import type {Coords} from '@floating-ui/dom';
 
 /**
  * Scrolls a scroll element by an amount of pixels.

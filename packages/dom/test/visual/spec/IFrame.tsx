@@ -249,6 +249,7 @@ function Virtual({scroll}: {scroll: number[]}) {
     if (mountNode && el) {
       refs.setReference({
         getBoundingClientRect: () => el.getBoundingClientRect(),
+        getClientRects: () => el.getClientRects(),
         contextElement: el,
       });
     }

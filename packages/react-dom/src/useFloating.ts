@@ -26,7 +26,6 @@ export function useFloating<RT extends ReferenceType = ReferenceType>(
     placement = 'bottom',
     strategy = 'absolute',
     middleware = [],
-    platform,
     elements: {reference: externalReference, floating: externalFloating} = {},
     transform = true,
     whileElementsMounted,
@@ -79,7 +78,6 @@ export function useFloating<RT extends ReferenceType = ReferenceType>(
   const dataRef = React.useRef(data);
 
   const whileElementsMountedRef = useLatestRef(whileElementsMounted);
-  const platformRef = useLatestRef(platform);
 
   const update = React.useCallback(() => {
     if (!referenceRef.current || !floatingRef.current) {
@@ -91,10 +89,6 @@ export function useFloating<RT extends ReferenceType = ReferenceType>(
       strategy,
       middleware: latestMiddleware,
     };
-
-    if (platformRef.current) {
-      config.platform = platformRef.current;
-    }
 
     const data = computePosition(
       referenceRef.current,
@@ -111,7 +105,7 @@ export function useFloating<RT extends ReferenceType = ReferenceType>(
         });
       });
     }
-  }, [latestMiddleware, placement, strategy, platformRef]);
+  }, [latestMiddleware, placement, strategy]);
 
   useLayoutEffect(() => {
     if (open === false && dataRef.current.isPositioned) {

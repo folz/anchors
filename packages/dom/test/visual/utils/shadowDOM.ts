@@ -2,7 +2,6 @@ import {
   autoUpdate,
   computePosition,
   Placement,
-  platform,
   Strategy,
 } from '@floating-ui/dom';
 import {HTMLAttributes} from 'react';
@@ -251,13 +250,12 @@ const defaultOptions = {
   placement: 'bottom-end',
 } as const;
 
-async function position({
+function position({
   floating,
   placement,
   reference,
   strategy,
-  polyfill,
-}: FloatingUICustomElement): Promise<void> {
+}: FloatingUICustomElement): void {
   if (!floating || !reference) {
     return;
   }
@@ -265,13 +263,6 @@ async function position({
   const {x, y} = computePosition(reference, floating, {
     placement,
     strategy,
-    platform: {
-      ...platform,
-      getOffsetParent:
-        polyfill === 'true'
-          ? (element) => platform.getOffsetParent(element, composedOffsetParent)
-          : platform.getOffsetParent,
-    },
   });
 
   Object.assign(floating.style, {
@@ -292,54 +283,4 @@ function setUpAutoUpdate(element: FloatingUICustomElement): () => void {
     // ensures initial positioning is accurate
     animationFrame: true,
   });
-}
-
-function getWindow(node: Node) {
-  return node.ownerDocument?.defaultView || window;
-}
-
-function isShadowRoot(node: Node): node is ShadowRoot {
-  return node instanceof getWindow(node).ShadowRoot;
-}
-
-/**
- * Polyfills the old offsetParent behavior from before the spec was changed:
- * https://github.com/w3c/csswg-drafts/issues/159
- */
-export function composedOffsetParent(element: HTMLElement) {
-  let {offsetParent} = element;
-  let ancestor: any = element;
-  let foundInsideSlot = false;
-
-  while (ancestor && ancestor !== offsetParent) {
-    const {assignedSlot} = ancestor;
-
-    if (assignedSlot) {
-      let newOffsetParent = assignedSlot.offsetParent;
-
-      if (getComputedStyle(assignedSlot).display === 'contents') {
-        const hadStyleAttribute = assignedSlot.hasAttribute('style');
-        const oldDisplay = assignedSlot.style.display;
-        assignedSlot.style.display = getComputedStyle(ancestor).display;
-
-        newOffsetParent = assignedSlot.offsetParent;
-
-        assignedSlot.style.display = oldDisplay;
-        if (!hadStyleAttribute) {
-          assignedSlot.removeAttribute('style');
-        }
-      }
-
-      ancestor = assignedSlot;
-      if (offsetParent !== newOffsetParent) {
-        offsetParent = newOffsetParent;
-        foundInsideSlot = true;
-      }
-    } else if (isShadowRoot(ancestor) && ancestor.host && foundInsideSlot) {
-      break;
-    }
-    ancestor = (isShadowRoot(ancestor) && ancestor.host) || ancestor.parentNode;
-  }
-
-  return offsetParent;
 }

@@ -1,4 +1,4 @@
-import type {Placement, Strategy} from '@floating-ui/core';
+import type {Placement, Strategy} from '@floating-ui/dom';
 import {useState} from 'react';
 
 import {allPlacements} from '../utils/allPlacements';

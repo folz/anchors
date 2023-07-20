@@ -1,4 +1,4 @@
-import {VirtualElement} from '@floating-ui/core';
+import {type VirtualElement, isElement} from '@floating-ui/dom';
 import {getOverflowAncestors, shift, useFloating} from '@floating-ui/react-dom';
 import {
   MutableRefObject,
@@ -8,8 +8,6 @@ import {
   useState,
 } from 'react';
 import {flushSync} from 'react-dom';
-
-import {isElement} from '../../../src/platform/isElement';
 
 export const useScroll = ({
   refs,

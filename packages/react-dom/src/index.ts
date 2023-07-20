@@ -11,7 +11,6 @@ export {
   inline,
   limitShift,
   offset,
-  platform,
   shift,
   size,
 } from '@floating-ui/dom';

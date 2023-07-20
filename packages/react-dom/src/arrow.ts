@@ -1,4 +1,4 @@
-import type {Middleware, Padding} from '@floating-ui/core';
+import type {Middleware, Padding} from '@floating-ui/dom';
 import {arrow as arrowCore, MiddlewareState} from '@floating-ui/dom';
 import * as React from 'react';
 

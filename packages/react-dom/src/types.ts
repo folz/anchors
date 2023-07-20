@@ -29,7 +29,6 @@ export type {
   InlineOptions,
   Length,
   Middleware,
-  MiddlewareArguments,
   MiddlewareData,
   MiddlewareReturn,
   MiddlewareState,
@@ -37,7 +36,6 @@ export type {
   OffsetOptions,
   Padding,
   Placement,
-  Platform,
   Rect,
   ReferenceElement,
   RootBoundary,
@@ -59,7 +57,6 @@ export {
   inline,
   limitShift,
   offset,
-  platform,
   shift,
   size,
 } from '@floating-ui/dom';

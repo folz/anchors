@@ -1,4 +1,4 @@
-import type {Alignment, Placement} from '@floating-ui/core';
+import type {Alignment, Placement} from '@floating-ui/dom';
 import {
   autoPlacement,
   autoUpdate,

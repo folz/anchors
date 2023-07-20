@@ -35,7 +35,7 @@ useCases.forEach((useCase) => {
   });
 });
 
-test('relative position host polyfill', async ({page}) => {
+test('relative position host', async ({page}) => {
   await page.goto('http://localhost:1234/shadow-DOM');
 
   await click(
@@ -45,11 +45,5 @@ test('relative position host polyfill', async ({page}) => {
 
   expect(await page.locator('.container').screenshot()).toMatchSnapshot(
     `without-polyfill.png`
-  );
-
-  await click(page, '[data-testid="polyfill-true"]');
-
-  expect(await page.locator('.container').screenshot()).toMatchSnapshot(
-    `with-polyfill.png`
   );
 });

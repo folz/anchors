@@ -1,4 +1,4 @@
-import type {OffsetOptions, Placement} from '@floating-ui/core';
+import type {OffsetOptions, Placement} from '@floating-ui/dom';
 import {offset, useFloating} from '@floating-ui/react-dom';
 import {useLayoutEffect, useState} from 'react';
 

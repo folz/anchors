@@ -1,9 +1,9 @@
-import {getDocumentElement} from './platform/getDocumentElement';
+import {getBoundingClientRect} from './getBoundingClientRect';
+import {getDocumentElement} from './getDocumentElement';
+import {getOverflowAncestors} from './getOverflowAncestors';
+import {floor, max, min} from './math';
 import type {FloatingElement, ReferenceElement} from './types';
-import {getBoundingClientRect} from './utils/getBoundingClientRect';
-import {getOverflowAncestors} from './utils/getOverflowAncestors';
-import {floor, max, min} from './utils/math';
-import {unwrapElement} from './utils/unwrapElement';
+import {unwrapElement} from './unwrapElement';
 
 export type AutoUpdateOptions = Partial<{
   /**

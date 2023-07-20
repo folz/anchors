@@ -30,7 +30,6 @@ const bundles = [
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
-        '@floating-ui/core': 'FloatingUICore',
         '@floating-ui/dom': 'FloatingUIDOM',
       },
     },
@@ -44,7 +43,6 @@ const bundles = [
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
-        '@floating-ui/core': 'FloatingUICore',
         '@floating-ui/dom': 'FloatingUIDOM',
       },
     },
@@ -61,7 +59,7 @@ const bundles = [
 export default bundles.map(({input, output}) => ({
   input,
   output,
-  external: ['react', 'react-dom', '@floating-ui/core', '@floating-ui/dom'],
+  external: ['react', 'react-dom', '@floating-ui/dom'],
   plugins: [
     commonjs(),
     nodeResolve({extensions: ['.ts']}),

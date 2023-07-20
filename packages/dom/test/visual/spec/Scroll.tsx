@@ -1,4 +1,4 @@
-import {Strategy} from '@floating-ui/core';
+import {Strategy} from '@floating-ui/dom';
 import {useFloating} from '@floating-ui/react-dom';
 import {useLayoutEffect, useState} from 'react';
 

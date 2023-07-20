@@ -28,52 +28,51 @@ export function Canvas() {
   const position = useCallback(() => {
     if (width === null || height === null) return;
 
-    computePosition(reference, floating, {
-      platform: {
-        getElementRects: (data) => data,
-        getDimensions: (element) => element,
-        getClippingRect: () => ({x: 0, y: 0, width, height}),
-      },
+    const {x, y} = computePosition(reference, floating, {
+      // platform: {
+      //   getElementRects: (data) => data,
+      //   getCssDimensions: (element) => element,
+      //   getClippingRect: () => ({x: 0, y: 0, width, height}),
+      // },
       placement: 'top-start',
       middleware: [
         offset(5),
         flip({padding: 5}),
         shift({padding: 5}),
       ],
-    }).then(({x, y}) => {
-      const {ctx} = getCanvasData(canvasRef.current);
-
-      ctx.beginPath();
-      ctx.rect(
-        reference.x,
-        reference.y,
-        reference.width,
-        reference.height
-      );
-      ctx.fillStyle = 'royalblue';
-      ctx.fill();
-
-      ctx.font = '17px Arial';
-      ctx.fillStyle = 'white';
-      ctx.fillText(
-        'Drag me',
-        reference.x + 43,
-        reference.y + reference.height / 2 + 5
-      );
-
-      ctx.beginPath();
-      ctx.rect(x, y, floating.width, floating.height);
-      ctx.fillStyle = 'black';
-      ctx.fill();
-
-      ctx.font = '16px Arial';
-      ctx.fillStyle = 'white';
-      ctx.fillText(
-        'Floating',
-        x + 100,
-        y + floating.height / 2 + 5
-      );
     });
+    const {ctx} = getCanvasData(canvasRef.current);
+
+    ctx.beginPath();
+    ctx.rect(
+      reference.x,
+      reference.y,
+      reference.width,
+      reference.height
+    );
+    ctx.fillStyle = 'royalblue';
+    ctx.fill();
+
+    ctx.font = '17px Arial';
+    ctx.fillStyle = 'white';
+    ctx.fillText(
+      'Drag me',
+      reference.x + 43,
+      reference.y + reference.height / 2 + 5
+    );
+
+    ctx.beginPath();
+    ctx.rect(x, y, floating.width, floating.height);
+    ctx.fillStyle = 'black';
+    ctx.fill();
+
+    ctx.font = '16px Arial';
+    ctx.fillStyle = 'white';
+    ctx.fillText(
+      'Floating',
+      x + 100,
+      y + floating.height / 2 + 5
+    );
   }, [width, height]);
 
   useEffect(() => {
