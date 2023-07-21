@@ -12,7 +12,7 @@
     "lint": "next lint"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "prettier": {
     "printWidth": 65,
     "singleQuote": true,
