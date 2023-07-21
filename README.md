@@ -13,19 +13,19 @@ React-specific.
 import React from 'react';
 import {computePosition, roundByDPR, shift} from '@folz/anchors';
 import {useAtomValue} from 'jotai';
-import {mouseRect$} from './atoms';
+import {mouseCoords$} from './atoms';
 
 /**
- * A layout component that follows the mouse cursor.
+ * A layout component anchored to track the mouse cursor position.
  */
 export const Mousetip = (props: Props) => {
   const ref = React.useRef<HTMLSpanElement>(null);
-  const mouseRect = useAtomValue(mouseRect$);
+  const mouseCoords = useAtomValue(mouseCoords$);
 
   React.useLayoutEffect(() => {
     if (!ref.current) return;
 
-    const {x, y} = computePosition(mouseRect, ref.current, {
+    const {x, y} = computePosition(mouseCoords, ref.current, {
       placement: 'top',
       middleware: [shift({crossAxis: true})],
     });
@@ -35,7 +35,7 @@ export const Mousetip = (props: Props) => {
       left: `0px`,
       transform: `translate(${roundByDPR(x)}px, ${roundByDPR(y)}px)`,
     });
-  }, [mouseRect]);
+  }, [mouseCoords]);
 
   return <span ref={ref}>{props.children}</span>;
 };
@@ -44,7 +44,7 @@ type Props = React.PropsWithChildren<{}>;
 ```
 
 <details>
-<summary><code>export const mouseRect$ = </code></summary>
+<summary><code>export const mouseCoords$ = </code></summary>
 
 ```tsx
 import {atom} from 'jotai';
@@ -56,7 +56,7 @@ mouse$.onMount = (setAtom) =>
     setAtom({x, y});
   });
 
-export const mouseRect$ = atom((get) => {
+export const mouseCoords$ = atom((get) => {
   const {x, y} = get(mouse$);
 
   return {
