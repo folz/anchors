@@ -1,13 +1,13 @@
 import type {Placement} from '@folz/anchors';
 import type {LimitShiftOptions} from '@folz/anchors';
-import {useLayoutEffect, useState} from 'react';
-
 import {
   limitShift as limitShiftFn,
   offset,
   shift,
   useFloating,
-} from '../../../../react-dom';
+} from '@folz/anchors-react';
+import {useLayoutEffect, useState} from 'react';
+
 import {allPlacements} from '../utils/allPlacements';
 import {Controls} from '../utils/Controls';
 import {useScroll} from '../utils/useScroll';

@@ -15,6 +15,7 @@
     "typecheck": "tsc",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "playwright": "pnpm dlx playwright test packages/dom/test/functional",
+    "playwright:install": "pnpm dlx playwright install --with-deps chromium",
     "playwright:update": "pnpm run playwright -- -u",
     "build": "pnpm --filter \"@folz/anchors\" run build && pnpm --filter \"@folz/anchors-react\" run build",
     "build:typescript": "tsc --project tsconfig.build.json",
