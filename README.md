@@ -2,12 +2,10 @@
   <img width="255.5px" height="377.5px" src="https://github.com/folz/anchors/blob/main/website/assets/anchors.png" alt="Anchors">
 <p>
 
-[Anchors](https://folz.github.io/anchors) is a library that helps you position
-floating elements, like tooltips, popovers, dropdowns, and more.
-
-It targets synchronous DOM APIs, so it can be used directly in most (all?) UI
-frameworks. The following example is in React, but nothing about Anchors here is
-React-specific.
+[Anchors](https://folz.github.io/anchors) is a library to position floating
+elements like tooltips, popovers, and dropdowns in robust and configurable ways.
+It targets synchronous, vanilla DOM APIs for ease of integration with Web UI
+frameworks.
 
 ```tsx
 import React from 'react';
@@ -86,8 +84,8 @@ the floating element stays visible.
 
 Anchors uses a well-tested approach created by
 [Floating UI](https://github.com/floating-ui/floating-ui) that efficiently
-calculate the positioning needed to anchor one element to another, making the
-adjustments necessary to handle any CSS layout rules also in effect.
+calculates the positioning needed to anchor one element to another, and makes
+any adjustments necessary to account for CSS layout rules also in effect.
 
 ## Getting started
 
