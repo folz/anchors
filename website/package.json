@@ -20,6 +20,7 @@
     "proseWrap": "always"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^13.4.12",
     "@svgr/webpack": "^5.5.0",
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.0",
@@ -33,6 +34,7 @@
     "@docsearch/css": "^3.3.3",
     "@docsearch/react": "^3.3.3",
     "@floating-ui/react": "^0.24.2",
+    "@folz/anchors": "workspace:^",
     "@mdx-js/loader": "^2.1.1",
     "@mdx-js/react": "^2.1.1",
     "@next/mdx": "^12.1.5",
@@ -45,6 +47,7 @@
     "rehype-pretty-code": "^0.10.0",
     "rehype-slug": "^4.0.1",
     "remark-smartypants": "^2.0.0",
+    "sharp": "^0.32.4",
     "shiki": "^0.12.1",
     "tailwind-merge": "^1.10.0",
     "unist-util-visit": "^2.0.3",

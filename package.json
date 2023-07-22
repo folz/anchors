@@ -14,7 +14,7 @@
   "scripts": {
     "typecheck": "tsc",
     "lint": "eslint . --ext .js,.ts,.tsx",
-    "build": "pnpm --filter \"@folz/anchors\" run build && pnpm --filter \"@folz/anchors-react\" run build",
+    "build": "pnpm -r build && pnpm build:typescript",
     "build:typescript": "tsc --project tsconfig.build.json",
     "clean": "rm -rf packages/**/src/[^_]*.d.ts packages/**/src/**/[^_]*.d.ts packages/**/dist"
   },

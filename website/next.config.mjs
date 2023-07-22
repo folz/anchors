@@ -60,6 +60,9 @@ const rehypePrettyCodeOptions = {
 
 export default {
   experimental: {esmExternals: true, scrollRestoration: true},
+  images: {
+    unoptimized: true,
+  },
   pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
   webpack(config, options) {
     config.module.rules.push({
