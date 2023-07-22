@@ -1,0 +1,75 @@
+{
+  "name": "@folz/anchors-react",
+  "version": "0.1.0",
+  "@rollingversions": {
+    "baseVersion": [
+      0,
+      1,
+      0
+    ]
+  },
+  "description": "Floating UI for React DOM",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/anchors.react.umd.js",
+  "module": "./dist/anchors.react.esm.js",
+  "unpkg": "./dist/anchors.react.umd.min.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "module": "./dist/anchors.react.esm.js",
+      "import": "./dist/anchors.react.mjs",
+      "default": "./dist/anchors.react.umd.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/",
+    "index.d.ts",
+    "src/**/*.d.ts"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=build rollup -c",
+    "test": "vitest"
+  },
+  "author": "atomiks",
+  "license": "MIT",
+  "bugs": "https://github.com/folz/anchors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/folz/anchors.git",
+    "directory": "packages/anchors-react"
+  },
+  "homepage": "https://folz.github.io/docs/react-dom",
+  "keywords": [
+    "tooltip",
+    "popover",
+    "dropdown",
+    "menu",
+    "popup",
+    "positioning",
+    "react",
+    "react-dom"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@folz/anchors": "workspace:^"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.16.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.2.0",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.7",
+    "@types/testing-library__jest-dom": "^5.14.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "use-isomorphic-layout-effect": "^1.1.2"
+  }
+}

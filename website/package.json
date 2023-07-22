@@ -48,6 +48,6 @@
     "shiki": "^0.12.1",
     "tailwind-merge": "^1.10.0",
     "unist-util-visit": "^2.0.3",
-    "use-isomorphic-layout-effect": "^1.1.1"
+    "use-isomorphic-layout-effect": "^1.1.2"
   }
 }

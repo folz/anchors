@@ -4,7 +4,7 @@
 
 [Anchors](https://folz.github.io/anchors) is a library to position floating
 elements like tooltips, popovers, and dropdowns in robust and configurable ways.
-It targets synchronous, vanilla DOM APIs for ease of integration with Web UI
+It targets synchronous, vanilla DOM APIs for ease of integration with web UI
 frameworks.
 
 ```tsx
@@ -160,14 +160,14 @@ At a high level:
   });
   ```
 
-- Anchors removes Floating UI's "platform" abstraction. It targets Web DOM APIs
+- Anchors removes Floating UI's "platform" abstraction. It targets DOM APIs
   directly
 - Anchors will probably not support React Native
   - Floating UI currently supports React Native
-  - This was the tradeoff that enabled a synchronous API
-  - This also meant we could remove some abstraction layers, which means Anchors
-    runs less code per `computePosition()`
-    - _(This is pretty much the main difference between the two projects.)_
+  - Removing React Native was the tradeoff that enabled a synchronous API
+    - This also meant we could remove some abstraction layers, which means
+      Anchors runs less code per `computePosition()`
+    - _(This is pretty much the main difference between the projects.)_
 - Anchors currently does not support Vue
   - Floating UI currently supports Vue
   - Anchors should be able to support Vue in the future

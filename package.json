@@ -1,5 +1,5 @@
 {
-  "name": "@folz/anchors",
+  "name": "@folz/anchors-monorepo",
   "@rollingversions/ignore": true,
   "private": true,
   "version": "0.0.0",
@@ -10,13 +10,10 @@
       0
     ]
   },
-  "description": "Anchors",
+  "description": "Anchors monorepo",
   "scripts": {
     "typecheck": "tsc",
     "lint": "eslint . --ext .js,.ts,.tsx",
-    "playwright": "pnpm dlx playwright test packages/dom/test/functional",
-    "playwright:install": "pnpm dlx playwright install --with-deps chromium",
-    "playwright:update": "pnpm run playwright -- -u",
     "build": "pnpm --filter \"@folz/anchors\" run build && pnpm --filter \"@folz/anchors-react\" run build",
     "build:typescript": "tsc --project tsconfig.build.json",
     "clean": "rm -rf packages/**/src/[^_]*.d.ts packages/**/src/**/[^_]*.d.ts packages/**/dist"
@@ -39,13 +36,11 @@
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
-    "@playwright/test": "^1.35.1",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.2",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-terser": "^0.4.3",
-    "@testing-library/jest-dom": "^5.16.5",
     "@types/node": "^20.3.2",
     "@types/resize-observer-browser": "^0.1.7",
     "@typescript-eslint/eslint-plugin": "^5.60.1",

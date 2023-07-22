@@ -1,0 +1,61 @@
+{
+  "name": "@folz/anchors",
+  "version": "0.1.0",
+  "@rollingversions": {
+    "baseVersion": [
+      0,
+      1,
+      0
+    ]
+  },
+  "description": "Anchors",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/anchors.umd.js",
+  "module": "./dist/anchors.esm.js",
+  "unpkg": "./dist/anchors.umd.min.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": {
+        "browser": {
+          "development": "./dist/anchors.browser.mjs",
+          "default": "./dist/anchors.browser.min.mjs"
+        },
+        "default": "./dist/anchors.mjs"
+      },
+      "module": "./dist/anchors.esm.js",
+      "default": "./dist/anchors.umd.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist/",
+    "index.d.ts",
+    "src/**/*.d.ts"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=build rollup -c",
+    "test": "vitest"
+  },
+  "author": "folz",
+  "license": "MIT",
+  "bugs": "https://github.com/folz/anchors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/folz/anchors",
+    "directory": "packages/anchors"
+  },
+  "homepage": "https://folz.github.io/anchors",
+  "keywords": [
+    "tooltip",
+    "popover",
+    "dropdown",
+    "menu",
+    "popup",
+    "positioning"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@folz/anchors-test",
+  "version": "0.1.0",
+  "@rollingversions": {
+    "baseVersion": [
+      0,
+      1,
+      0
+    ]
+  },
+  "description": "Anchors test",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest"
+  },
+  "author": "folz",
+  "license": "MIT",
+  "bugs": "https://github.com/folz/anchors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/folz/anchors",
+    "directory": "packages/anchors-test"
+  },
+  "homepage": "https://folz.github.io/anchors",
+  "keywords": [
+    "tooltip",
+    "popover",
+    "dropdown",
+    "menu",
+    "popup",
+    "positioning"
+  ],
+  "dependencies": {
+    "@folz/anchors": "workspace:^",
+    "@folz/anchors-react": "workspace:^"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.36.1",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/testing-library__jest-dom": "^5.14.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2"
+  }
+}

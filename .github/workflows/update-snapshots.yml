@@ -11,9 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup
-      - run: pnpm dlx playwright install --with-deps chromium
+      - run:
+          pnpm --filter anchors-test exec playwright install --with-deps
+          chromium
       - run: pnpm run build
-      - run: pnpm run playwright:update
+      - run: pnpm --filter anchors-test exec playwright test -- -u
       - uses: EndBug/add-and-commit@v7
         with:
           add: '.'
