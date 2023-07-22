@@ -48,7 +48,7 @@
     "sharp": "^0.32.4",
     "shiki": "^0.12.1",
     "tailwind-merge": "^1.10.0",
-    "unist-util-visit": "^2.0.3",
+    "unist-util-visit": "^5.0.0",
     "use-isomorphic-layout-effect": "^1.1.2"
   }
 }
