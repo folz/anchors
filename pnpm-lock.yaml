@@ -157,8 +157,8 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3(@algolia/client-search@4.19.1)(react-dom@18.2.0)(react@18.2.0)
       '@floating-ui/react':
-        specifier: ^0.24.2
-        version: 0.24.2(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^0.24.8
+        version: 0.24.8(react-dom@18.2.0)(react@18.2.0)
       '@folz/anchors':
         specifier: workspace:^
         version: link:../packages/anchors
@@ -1945,8 +1945,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@floating-ui/react@0.24.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-8sdLmcC85J6M2H0AL8yOQuiWD4T0gNMSLpuJjmXyEA6ndfmxXR0hwKFkczB4xRNFhKbwoQeuh8z561HE2vOdZw==}
+  /@floating-ui/react@0.24.8(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-AuYeDoaR8jtUlUXtZ1IJ/6jtBkGnSpJXbGNzokBL87VDJ8opMq1Bgrc0szhK482ReQY6KZsMoZCVSb4xwalkBA==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
