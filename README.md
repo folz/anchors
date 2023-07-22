@@ -81,10 +81,11 @@ to the edge of a viewport and becomes obscured, an event called a collision.
 When a collision would happen, the anchoring position needs to be adjusted so
 the floating element stays visible.
 
-Anchors uses a well-tested approach created by
-[Floating UI](https://github.com/floating-ui/floating-ui) that efficiently
-calculates the positioning needed to anchor one element to another, and makes
-any adjustments necessary to account for CSS layout rules also in effect.
+Anchors handles scroll overflow, CSS offsets, positioning contexts, and more,
+powered by [Floating UI](https://github.com/floating-ui/floating-ui)'s
+constraint engine. It uses a well-tested approach that efficiently calculates
+the positioning needed to anchor one element to another while handling any
+adjustments necessary to account for CSS layout effects.
 
 ## Getting started
 

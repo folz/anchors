@@ -168,8 +168,8 @@ function HomePage() {
               </span>{' '}
               deals with the tricky bits for you: it handles
               scroll overflow, CSS offsets, positioning contexts,
-              and other edge cases, using a constraint solver
-              based on Floating UI.)
+              and more, powered by Floating UI's constraint
+              engine.)
             </p>
           </div>
           <div className="container mx-auto grid max-w-screen-xl max-w-screen-xl gap-8 md:px-4 lg:grid-cols-2">

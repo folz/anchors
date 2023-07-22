@@ -59,6 +59,7 @@ const rehypePrettyCodeOptions = {
 };
 
 export default {
+  basePath: '/anchors',
   experimental: {esmExternals: true, scrollRestoration: true},
   images: {
     unoptimized: true,
