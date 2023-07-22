@@ -3,9 +3,8 @@
 <p>
 
 [Anchors](https://folz.github.io/anchors) is a library to position floating
-elements like tooltips, popovers, and dropdowns in robust and configurable ways.
-It targets synchronous, vanilla DOM APIs for ease of integration with web UI
-frameworks.
+elements like tooltips, popovers, and dropdowns in robust and configurable ways,
+using synchronous, vanilla DOM APIs.
 
 ```tsx
 import React from 'react';
