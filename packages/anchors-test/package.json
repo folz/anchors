@@ -1,17 +1,8 @@
 {
   "name": "@folz/anchors-test",
+  "private": true,
   "version": "0.1.0",
-  "@rollingversions": {
-    "baseVersion": [
-      0,
-      1,
-      0
-    ]
-  },
-  "description": "Anchors test",
-  "publishConfig": {
-    "access": "public"
-  },
+  "description": "Tests for @folz/anchors",
   "scripts": {
     "dev": "vite",
     "test": "vitest"

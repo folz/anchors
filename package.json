@@ -1,16 +1,8 @@
 {
   "name": "@folz/anchors-monorepo",
-  "@rollingversions/ignore": true,
   "private": true,
-  "version": "0.0.0",
-  "@rollingversions": {
-    "baseVersion": [
-      0,
-      0,
-      0
-    ]
-  },
-  "description": "Anchors monorepo",
+  "version": "0.1.0",
+  "description": "Monorepo for @folz/anchors",
   "scripts": {
     "typecheck": "tsc",
     "lint": "eslint . --ext .js,.ts,.tsx",
@@ -18,7 +10,7 @@
     "build:typescript": "tsc --project tsconfig.build.json",
     "clean": "rm -rf packages/**/src/[^_]*.d.ts packages/**/src/**/[^_]*.d.ts packages/**/dist"
   },
-  "author": "",
+  "author": "folz",
   "license": "MIT",
   "prettier": {
     "singleQuote": true,

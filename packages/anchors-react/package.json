@@ -1,14 +1,7 @@
 {
   "name": "@folz/anchors-react",
   "version": "0.1.0",
-  "@rollingversions": {
-    "baseVersion": [
-      0,
-      1,
-      0
-    ]
-  },
-  "description": "Floating UI for React DOM",
+  "description": "Use @folz/anchors with React",
   "publishConfig": {
     "access": "public"
   },
@@ -35,7 +28,7 @@
     "build": "NODE_ENV=build rollup -c",
     "test": "vitest"
   },
-  "author": "atomiks",
+  "author": "folz",
   "license": "MIT",
   "bugs": "https://github.com/folz/anchors",
   "repository": {

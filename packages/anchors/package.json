@@ -1,14 +1,7 @@
 {
   "name": "@folz/anchors",
   "version": "0.1.0",
-  "@rollingversions": {
-    "baseVersion": [
-      0,
-      1,
-      0
-    ]
-  },
-  "description": "Anchors",
+  "description": "Position floating elements in robust and configurable ways.",
   "publishConfig": {
     "access": "public"
   },
