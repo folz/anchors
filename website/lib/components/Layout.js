@@ -87,11 +87,7 @@ function PackageVersion({package: {name, version}}) {
       <TooltipContent>
         The docs on this page reference the latest version of
         <br />
-        <strong>
-          @floating-ui/
-          {name}
-        </strong>
-        . Click to view it on npm.
+        <strong>@folz/{name}</strong>. Click to view it on npm.
       </TooltipContent>
     </Tooltip>
   );
@@ -381,14 +377,6 @@ const nav = [
     mono: true,
   },
   {
-    url: '/docs/react-native',
-    title: 'React Native',
-  },
-  {
-    url: '/docs/vue',
-    title: 'Vue',
-  },
-  {
     url: '/docs/migration',
     title: 'Migration',
   },
@@ -542,12 +530,8 @@ function SideNavList({anchors, hash}) {
 }
 
 const initialPackages = [
-  {name: 'core', version: 'latest'},
-  {name: 'dom', version: 'latest'},
-  {name: 'react', version: 'latest'},
-  {name: 'react-dom', version: 'latest'},
-  {name: 'react-native', version: 'latest'},
-  {name: 'vue', version: 'latest'},
+  {name: 'anchors', version: 'latest'},
+  {name: 'anchors-react', version: 'latest'},
 ];
 
 export default function Layout({children, className}) {
@@ -568,7 +552,7 @@ export default function Layout({children, className}) {
         const packageResults = await Promise.all(
           initialPackages.map(({name}) =>
             fetch(
-              `https://registry.npmjs.org/@floating-ui/${name}/latest`
+              `https://registry.npmjs.org/@folz/${name}/latest`
             ).then((res) => res.json())
           )
         );
@@ -655,7 +639,7 @@ export default function Layout({children, className}) {
 
   const title = `${
     nav.find(({url}) => url === pathname)?.title ?? 'Docs'
-  } | Floating UI`;
+  } | Anchors`;
 
   const activeTitle =
     nav.find(({url}) => url === pathname)?.title ?? '';
@@ -674,14 +658,8 @@ export default function Layout({children, className}) {
       'Popover',
       'Dialog',
     ].includes(activeTitle);
-  const isReactNativePage = activeTitle.includes('React Native');
-  const isVuePage = activeTitle.includes('Vue');
   const isVanillaPage =
-    !isReactPage &&
-    !isReactNativePage &&
-    !isVuePage &&
-    !isDOMOnlyPage &&
-    !isNoPage;
+    !isReactPage && !isDOMOnlyPage && !isNoPage;
 
   let firstVersionIndex = null;
   let secondVersionIndex = null;
@@ -692,15 +670,11 @@ export default function Layout({children, className}) {
   } else if (isReactDOMPage) {
     firstVersionIndex = 3;
     secondVersionIndex = 2;
-  } else if (isReactNativePage) {
-    firstVersionIndex = 4;
   } else if (isReactPage) {
     firstVersionIndex = 2;
   } else if (isVanillaPage) {
     firstVersionIndex = 0;
     secondVersionIndex = 1;
-  } else if (isVuePage) {
-    firstVersionIndex = 5;
   }
 
   const {refs, context} = useFloating({
@@ -928,23 +902,7 @@ export default function Layout({children, className}) {
         </div>
       </div>
       <footer className="py-8 px-4 text-center text-gray-500 md:pl-64 lg:px-72 lg:pr-0 xl:px-[22rem] xl:pr-72">
-        <p>© {new Date().getFullYear()} • MIT License</p>
-        <p className="mt-4 text-sm">
-          Icons made by{' '}
-          <a
-            className="text-blue-600 dark:text-blue-400"
-            href="https://www.zwicon.com/cheatsheet.html"
-          >
-            zwoelf
-          </a>{' '}
-          and{' '}
-          <a
-            className="text-blue-600 dark:text-blue-400"
-            href="https://www.flaticon.com"
-          >
-            Freepik
-          </a>
-        </p>
+        <p>© 2023 • MIT License</p>
       </footer>
     </MDXProvider>
   );

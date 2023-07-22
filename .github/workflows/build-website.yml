@@ -24,7 +24,7 @@ jobs:
       - uses: actions/configure-pages@v3
         with:
           static_site_generator: next
-      - run: pnpm --filter '@folz/anchors-website' build
+      - run: pnpm website build
       - uses: actions/upload-pages-artifact@v2
         with:
           path: ./website/out

@@ -124,8 +124,6 @@ function HomePage() {
                   <a
                     href="https://github.com/folz/anchors"
                     className="flex items-center gap-2 rounded border border-gray-50 bg-gray-900 px-4 py-3 font-semibold text-gray-50 opacity-90 shadow-lg transition hover:opacity-100 hover:shadow-xl sm:text-lg"
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -157,20 +155,20 @@ function HomePage() {
               </h2>
             </div>
             <p className="prose text-left text-xl dark:prose-invert lg:text-2xl lg:leading-normal">
-              Position any floating element next to any other
-              anchor element. Use{' '}
-              <strong>placement strategies</strong> to customize
-              the position of tooltips, popovers, dropdowns, and
-              more to your heart's content.{' '}
+              Anchor any floating element onto any other element.
+              Use <strong>placement strategies</strong> to
+              customize the position and behavior of tooltips,
+              popovers, dropdowns, and more to your heart's
+              content.
             </p>
             <p className="text-md text-left dark:prose-invert lg:text-lg">
               (
               <span className="bg-gradient-to-r from-[#e06c75] via-[#fac570] to-[#67cce5] bg-clip-text font-bold text-transparent">
                 Anchors
               </span>{' '}
-              deals with the tricky bits for you: the position
-              solver can handle scroll overflow, CSS offsets,
-              positioning contexts, and more.)
+              deals with the tricky bits for you – it correctly
+              handles scrolling, overflow, positioning, layout,
+              and much more.)
             </p>
           </div>
           <div className="container mx-auto grid max-w-screen-xl max-w-screen-xl gap-8 md:px-4 lg:grid-cols-2">
@@ -226,7 +224,7 @@ function HomePage() {
             <div className="container mx-auto flex flex-col gap-3 px-4 sm:px-8">
               <p>
                 <strong className="font-semibold">
-                  © {new Date().getFullYear()} • MIT License
+                  © 2023 • MIT License
                 </strong>
               </p>
             </div>

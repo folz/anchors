@@ -3,88 +3,44 @@ import introInline from '../../assets/intro.inline.jpg';
 # Getting Started
 
 Anchors is a utility library for position anchoring. It helps you
-create floating elements like tooltips, popovers, and dropdowns,
-using the time-tested position solver of Floating UI.
+create floating element interactions like tooltips, popovers, and
+dropdowns, using the time-tested position solver of Floating UI.
 
 <CircleImage name="intro" inline={introInline} />
 
-Anchor a floating element (such as a tooltip) to another element
-(such as a button) while simultaneously ensuring it stays in view
-as best as possible by avoiding collisions.
-
 ## Why
 
-We want the ability to conceptually "anchor" the position of a
-floating element, so that its position is to be declaratively
-tied to the position of some other UI element. This behavior is
-difficult to get right on the web.
+Anchoring a floating element's onto another element means the
+floating element's position should be relative to the position of
+that other UI element. On the web, implementing this
+is....challenging.
 
-Making sure a floating element remains anchored next to another
-element can be challenging, considering all the ways CSS can
-affect layout and all the ways DOM elements can be positioned
-around.
-
-Absolute positioning can also be an issue when the floating
-element is too close to the edge of a viewport and becomes
-obscured, an event called a collision. When a collision would
-happen, the anchoring position needs to be adjusted so the
-floating element stays visible.
-
-Anchors handles scroll overflow, CSS offsets, positioning
-contexts, and more, powered by
-[Floating UI](https://github.com/floating-ui/floating-ui)'s
-constraint engine. It uses a well-tested approach that
-efficiently calculates the positioning needed to anchor one
-element to another while handling any adjustments necessary to
-account for CSS layout effects.
+Anchors deals with the tricky bits for you, giving you useful
+positioning utilities built on Floating UI that handle scrolling,
+overflow, positioning, layout, and much more.
 
 ## Install
 
+Use on the [web](/docs/computePosition) with vanilla JavaScript
+
 ```shell
 npm install @folz/anchors
-npm install @folz/anchors-react
 # or
 yarn add @folz/anchors
-yarn add @folz/anchors-react
 # or
-pnpm install @folz/anchors
-pnpm install @folz/anchors-react
+pnpm add @folz/anchors
 ```
-
-### Vanilla
-
-Use on the [web](/docs/computePosition) with vanilla JavaScript
-(`dom` refers to the
-[Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-to work with HTML/SVG elements).
 
 ### React
 
-Use with [React DOM](/docs/react)
+Use with [React](/docs/react)
 
-#### React DOM
-
-```bash
-npm install @floating-ui/react
-```
-
-### Vue
-
-Use with [Vue](/docs/vue).
-
-```bash
-npm install @floating-ui/vue
-```
-
-### Canvas or other platforms
-
-If you're targeting a platform other than the vanilla DOM (web),
-React, or React Native, you can create your own
-[Platform](/docs/platform). This allows you to support things
-like Canvas/WebGL, or other platforms that can run JavaScript.
-
-```bash
-npm install @floating-ui/core
+```shell
+npm install @folz/anchors-react
+# or
+yarn add @folz/anchors-react
+# or
+pnpm add @folz/anchors-react
 ```
 
 ## CDN

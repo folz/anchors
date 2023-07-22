@@ -9,7 +9,7 @@
     "build": "pnpm -r build && pnpm build:typescript",
     "build:typescript": "tsc --project tsconfig.build.json",
     "clean": "rm -rf packages/**/src/[^_]*.d.ts packages/**/src/**/[^_]*.d.ts packages/**/dist",
-    "website": "pnpm --filter '@folz/anchors-website' run dev"
+    "website": "pnpm --filter '@folz/anchors-website'"
   },
   "author": "folz",
   "license": "MIT",

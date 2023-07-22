@@ -3,8 +3,8 @@
 <p>
 
 [Anchors](https://folz.github.io/anchors) is a utility library for position
-anchoring. It helps you create floating elements like tooltips, popovers, and
-dropdowns, using the time-tested position solver of Floating UI.
+anchoring. It helps you create floating element interactions like tooltips,
+popovers, and dropdowns, using the time-tested position solver of Floating UI.
 
 ```tsx
 import React from 'react';
@@ -68,24 +68,13 @@ export const mouseCoords$ = atom((get) => {
 
 ## Why
 
-We want the ability to conceptually "anchor" the position of a floating element,
-so that its position is to be declaratively tied to the position of some other
-UI element. This behavior is difficult to get right on the web.
+Anchoring a floating element's onto another element means the floating element's
+position should be relative to the position of that other UI element. On the
+web, implementing this is....challenging.
 
-Making sure a floating element remains anchored next to another element can be
-challenging, considering all the ways CSS can affect layout and all the ways DOM
-elements can be positioned around.
-
-Absolute positioning can also be an issue when the floating element is too close
-to the edge of a viewport and becomes obscured, an event called a collision.
-When a collision would happen, the anchoring position needs to be adjusted so
-the floating element stays visible.
-
-Anchors handles scroll overflow, CSS offsets, positioning contexts, and more,
-powered by [Floating UI](https://github.com/floating-ui/floating-ui)'s
-constraint engine. It uses a well-tested approach that efficiently calculates
-the positioning needed to anchor one element to another while handling any
-adjustments necessary to account for CSS layout effects.
+Anchors deals with the tricky bits for you, giving you useful positioning
+utilities built on Floating UI that handle scrolling, overflow, positioning,
+layout, and much more.
 
 ## Install
 
