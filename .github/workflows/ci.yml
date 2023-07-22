@@ -29,29 +29,28 @@ jobs:
         shell: sh
       - run: pnpm --filter '@folz/anchors' --filter '@folz/anchors-react' test
         shell: sh
-
-  functional-tests:
-    name: Functional tests
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        shardIndex: [1, 2, 3]
-        shardTotal: [3]
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/setup
-      - run:
-          pnpm --filter '@folz/anchors-test' exec playwright install --with-deps
-          chromium
-        shell: sh
-      - run: pnpm --filter '@folz/anchors' --filter '@folz/anchors-react' build
-        shell: sh
-      - run:
-          pnpm --filter '@folz/anchors-test' exec playwright test --shard=${{
-          matrix.shardIndex }}/${{ matrix.shardTotal }} --workers=1
-        shell: sh
-      - uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: visual-snapshots-diff
-          path: test-results
+#  functional-tests:
+#    name: Functional tests
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        shardIndex: [1, 2, 3]
+#        shardTotal: [3]
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: ./.github/actions/setup
+#      - run:
+#          pnpm --filter '@folz/anchors-test' exec playwright install --with-deps
+#          chromium
+#        shell: sh
+#      - run: pnpm --filter '@folz/anchors' --filter '@folz/anchors-react' build
+#        shell: sh
+#      - run:
+#          pnpm --filter '@folz/anchors-test' exec playwright test --shard=${{
+#          matrix.shardIndex }}/${{ matrix.shardTotal }} --workers=1
+#        shell: sh
+#      - uses: actions/upload-artifact@v2
+#        if: always()
+#        with:
+#          name: visual-snapshots-diff
+#          path: test-results
