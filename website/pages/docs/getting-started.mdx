@@ -2,46 +2,54 @@ import introInline from '../../assets/intro.inline.jpg';
 
 # Getting Started
 
-Anchors is a library that helps you create "floating" elements
-such as tooltips, popovers, dropdowns, and more.
+Anchors is a utility library for position anchoring. It helps you
+create floating elements like tooltips, popovers, and dropdowns,
+using the time-tested position solver of Floating UI.
 
 <CircleImage name="intro" inline={introInline} />
 
-It offers two main features:
-
-1. **Anchor positioning**: Anchor a floating element (such as a
-   tooltip) to another element (such as a button) while
-   simultaneously ensuring it stays in view as best as possible
-   by avoiding collisions. This feature is available for all
-   platforms.
-2. **User interactions for React**: Hooks and components for
-   composing interactions to create accessible floating UI
-   components.
+Anchor a floating element (such as a tooltip) to another element
+(such as a button) while simultaneously ensuring it stays in view
+as best as possible by avoiding collisions.
 
 ## Why
 
-Floating elements are absolutely positioned, typically anchored
-to another UI element. Ensuring a floating element remains
-anchored next to another element can be challenging, especially
-in unique layout contexts like scrolling containers.
+We want the ability to conceptually "anchor" the position of a
+floating element, so that its position is to be declaratively
+tied to the position of some other UI element. This behavior is
+difficult to get right on the web.
 
-Absolute positioning can also cause problems when the floating
-element is too close to the edge of the viewport and becomes
-obscured, also known as a collision. When a collision occurs, the
-position must be adjusted to ensure the floating element remains
-visible.
+Making sure a floating element remains anchored next to another
+element can be challenging, considering all the ways CSS can
+affect layout and all the ways DOM elements can be positioned
+around.
 
-Further, floating elements are often interactive, which can raise
-complex accessibility issues when designing user interactions.
+Absolute positioning can also be an issue when the floating
+element is too close to the edge of a viewport and becomes
+obscured, an event called a collision. When a collision would
+happen, the anchoring position needs to be adjusted so the
+floating element stays visible.
 
-Anchors offers a set of low-level features to help you navigate
-these challenges and build accessible floating UI components.
+Anchors handles scroll overflow, CSS offsets, positioning
+contexts, and more, powered by
+[Floating UI](https://github.com/floating-ui/floating-ui)'s
+constraint engine. It uses a well-tested approach that
+efficiently calculates the positioning needed to anchor one
+element to another while handling any adjustments necessary to
+account for CSS layout effects.
 
 ## Install
 
-To install Anchors, you can use a package manager like npm or a
-CDN. There are different versions available for different
-platforms.
+```shell
+npm install @folz/anchors
+npm install @folz/anchors-react
+# or
+yarn add @folz/anchors
+yarn add @folz/anchors-react
+# or
+pnpm install @folz/anchors
+pnpm install @folz/anchors-react
+```
 
 ### Vanilla
 
@@ -50,25 +58,14 @@ Use on the [web](/docs/computePosition) with vanilla JavaScript
 [Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 to work with HTML/SVG elements).
 
-```bash
-npm install @floating-ui/dom
-```
-
 ### React
 
-Use with [React DOM](/docs/react) or
-[React Native](/docs/react-native).
+Use with [React DOM](/docs/react)
 
 #### React DOM
 
 ```bash
 npm install @floating-ui/react
-```
-
-#### React Native
-
-```bash
-npm install @floating-ui/react-native
 ```
 
 ### Vue

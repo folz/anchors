@@ -1,3 +1,3 @@
 # `@folz/anchors`
 
-This is the library to use Anchors on the web.
+A utility library for position anchoring on the web.

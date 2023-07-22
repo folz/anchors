@@ -1,7 +1,7 @@
 {
   "name": "@folz/anchors",
   "version": "0.1.0",
-  "description": "Position floating elements in robust and configurable ways.",
+  "description": "A utility library for position anchoring on the web",
   "publishConfig": {
     "access": "public"
   },

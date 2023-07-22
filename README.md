@@ -2,9 +2,9 @@
   <img width="255.5px" height="377.5px" src="https://github.com/folz/anchors/blob/main/website/assets/anchors.png" alt="Anchors">
 <p>
 
-[Anchors](https://folz.github.io/anchors) is a library to position floating
-elements like tooltips, popovers, and dropdowns in robust and configurable ways,
-using synchronous, vanilla DOM APIs.
+[Anchors](https://folz.github.io/anchors) is a utility library for position
+anchoring. It helps you create floating elements like tooltips, popovers, and
+dropdowns, using the time-tested position solver of Floating UI.
 
 ```tsx
 import React from 'react';
@@ -73,8 +73,8 @@ so that its position is to be declaratively tied to the position of some other
 UI element. This behavior is difficult to get right on the web.
 
 Making sure a floating element remains anchored next to another element can be
-challenging, what with all the different layout rules in CSS, plus all the ways
-that elements can be moved around.
+challenging, considering all the ways CSS can affect layout and all the ways DOM
+elements can be positioned around.
 
 Absolute positioning can also be an issue when the floating element is too close
 to the edge of a viewport and becomes obscured, an event called a collision.
@@ -87,7 +87,7 @@ constraint engine. It uses a well-tested approach that efficiently calculates
 the positioning needed to anchor one element to another while handling any
 adjustments necessary to account for CSS layout effects.
 
-## Getting started
+## Install
 
 ```shell
 npm install @folz/anchors

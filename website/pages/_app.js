@@ -1,5 +1,4 @@
 import 'tailwindcss/tailwind.css';
-import '@docsearch/css';
 import '../assets/reach-skip-nav.css';
 import '../assets/global.css';
 

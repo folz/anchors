@@ -124,7 +124,7 @@ module.exports = {
         DEFAULT: {
           css: {
             '--tw-prose-body': theme('colors.gray[800]'),
-            '--tw-prose-invert-body': theme('colors.gray[150]'),
+            '--tw-prose-invert-body': theme('colors.gray[100]'),
             '--tw-prose-bullets': theme('colors.gray[800]'),
             '--tw-prose-invert-bullets': theme(
               'colors.gray[150]'

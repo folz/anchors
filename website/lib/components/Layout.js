@@ -1,4 +1,3 @@
-import {DocSearch} from '@docsearch/react';
 import {
   autoUpdate,
   FloatingFocusManager as FloatingFocusManagerComponent,
@@ -875,14 +874,9 @@ export default function Layout({children, className}) {
               <Menu />
             </button>
             <div className="ml-4 flex min-w-0 items-center justify-end gap-4 md:ml-0 md:mr-0 md:flex-row md:justify-start md:pl-0">
-              <DocSearch
-                appId="0E85PIAI2P"
-                indexName="floating-ui"
-                apiKey="51e39a76760916075e22d9b217f4434f"
-              />
               <a
                 className="flex items-center gap-1"
-                href="https://github.com/floating-ui/floating-ui"
+                href="https://github.com/folz/anchors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
